@@ -13,7 +13,7 @@ collection = mars_db
 
 
 def init_browser():
-    executable_path = {'executable_path': 'chromedriver.exe'}
+    executable_path = {'executable_path': 'C:Users/DuvanFelipe/Downloads/chromedriver.exe'}
     return Browser('chrome', **executable_path, headless = False)
 
 def scrape():
