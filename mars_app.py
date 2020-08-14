@@ -6,6 +6,8 @@ import scrape_mars
 sys.setrecursionlimit(2000)
 app = Flask(__name__)
 
+mongo = PyMongo(app)
+
 
 # use pymongo to connect with mongodb server
 # client = pymongo.MongoClient('mongodb://localhost:27017')
@@ -37,9 +39,9 @@ def scrape():
     mars.update({}, mars_data, upsert=True)
     return redirect("http://localhost:27017/", code=302)
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
-
-
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
